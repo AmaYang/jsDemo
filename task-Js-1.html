@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>task-Js-1</title>
+    <style>
+        html{
+            font-size: 62.5%;
+        }
+        .warp{
+            padding: 1.6% 0 0 0;
+            width: 40%;
+            margin: 0 auto;
+        }
+        .square{
+            background-color: #00008b;
+            width: 30%;
+            padding: 30% 0 0 0;
+            margin: 0 1.6% 3% 1.6%;
+            float: right;
+            border-radius: 10%;
+        }
+        .btn{
+            width: 40%;
+            height: 5rem;
+            color:  #00008b;
+            font-size: 2.5rem;
+            background-color: #fff;
+            border: 2px solid  #00008b;
+            border-radius: 1rem;
+            margin: 0 4.5% 5%;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div class="warp">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div>
+        <button class="btn" onclick="start()">start</button> <!--使用onclick触发事件-->
+        <button class="btn" onclick="pause()">end</button>
+    </div>
+</div>
+
+<script>
+    var square = document.getElementsByClassName("square"); //定义变量square，按照类名抓取元素。
+    var num = []; //定义一个数组。
+//    var color = [];
+    var time1;
+    function start() {
+        clearInterval(time1); //清除定时器time1
+        for (var x=0;x<square.length;x++) {
+            console.log(square.length);    //运行当前程序，方便查询书写结果
+            square[x].style.backgroundColor = "#00008b";
+        }//初始化所有小格子的颜色
+
+        for (var i=0;i<3;i++) {
+            num[i] = (Math.floor(Math.random() * 9)); //num[0],num[1],num[2]的值是从[0,9）的随机整数;
+
+            if (num.indexOf(num[i]) < 0) {
+                num.push(num[i]);
+            }
+            /* 这段函数的主要作用是去重。
+               .indexOf()返回某个指定的字符串值在字符串中首次出现的位置，如果要检索的字符串值没有出现，则该方法返回 -1。
+               如果没有返回-1，则执行push()函数，push()方法可向数组的末尾添加一个或多个元素，并返回新的长度。
+               也就是说，只要i<3，就会向数组添加一个不重复的从[0,9）的随机整数。
+               */
+            function rgbColor() { //产生随机背景色
+                var r = Math.floor(Math.random()*226);
+                var g = Math.floor(Math.random()*226);
+                var b = Math.floor(Math.random()*226);
+                return "rgb("+r+","+g+","+b+")";
+            }
+            /*RGB 颜色值是这样规定的：rgb(red, green, blue)。每个参数 (red、green 以及 blue) 定义颜色的强度，
+             可以是介于 0 与 255 之间的整数，或者是百分比值（从 0% 到 100%）。*/
+//            color[i]="#"+Math.floor(Math.random()*0xffffff).toString(16);
+//            rgbColor(); //定义了函数rgbColor，运行该函数，可在接下来的语句中运用函数计算结果
+//            color[i] = "rgb"+"("+rgb+")";
+//            console.log(color[i]);
+        }
+        square[num[0]].style.backgroundColor = rgbColor();  //随机的三个square背景色改为随机的三个color[i]
+        square[num[1]].style.backgroundColor = rgbColor();
+        square[num[2]].style.backgroundColor = rgbColor();
+
+        time1=setInterval("start();",1000);
+    }
+
+    function pause(){     //onclick触发pause()函数，当square编号为0至8的整数时，背景色被重置成#00008b
+        for (var n=0;n<9;n++) {
+            square[n].style.backgroundColor = "#00008b";
+        }
+        window.clearInterval(time1); //清除定时器time1
+    }
+</script>
+
+</body>
+</html>
