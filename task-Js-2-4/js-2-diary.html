@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link type="text/css" rel="stylesheet" href="reset.css">
+    <link type="text/css" rel="stylesheet" href="js-2-diary.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <title>js-2-diary</title>
+</head>
+<body>
+<header>
+    <img class="pic1" src="taskimage/task13images/menu.png">
+    <div class="vote">法官日记</div>
+    <img class="pic2" src="taskimage/task13images/cross.png">
+</header>
+
+<div class="btns">
+    <button style="background-color: #80cbc4;">天黑了</button>
+    <button onclick="kill()">杀手请杀人</button>
+</div>
+
+<div class="btns">
+    <button style="background-color: #80cbc4;">天亮了</button>
+    <button onclick="ghost()">亡灵发表遗言</button>
+    <button onclick="states()">玩家依次发言</button>
+    <button onclick="killAgain()">投票</button>
+</div>
+
+<script src="js-2-diary.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+html{
+  font-size: 62.5%;
+}
+$primaryColor1: #29bde0;
+$primaryColor2: #fbb435;
+$primaryColor3: #83b09a;
+$font-size1: 2rem;
+$font-size2: 1.5rem;
+@mixin display ($flex){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+body{
+  background-color: $primaryColor1;
+}
+.head-bar{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+header{
+  background-color: $primaryColor1;
+  font-size: $font-size1;
+  color: #ffffff;
+  @include display(flex);
+  justify-content: space-between;
+  padding: 3%;
+  border-bottom: 1px solid #c0c0c0;
+  img{
+    width: 20px;
+    height: 20px;
+ }
+}
+.finish{
+  background-color: lighten($primaryColor1,30%);
+  font-size: $font-size2;
+  padding: 2rem 5%;
+  position: relative;
+  img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: block;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    right: 5%;
+  }
+}
+.explain{
+  font-size: $font-size2;
+  padding: 5% 0 5% 5%;
+  color: #ffffff;
+}
+.main{
+  background-color: $primaryColor1;
+  padding: 15% 0 25%;
+  overflow: scroll;
+}
+.row{
+  @include display(flex);
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.unit{
+  margin: 5% 2%;
+  position: relative;
+  float: left;
+  &:hover .cover{
+    opacity: 0;
+  }
+}
+.square{
+  width: 8.5rem;
+  height: 8.5rem;
+  border: 4px solid #ffffff;
+  .identification{
+    width: 100%;
+    text-align: center;
+    padding: 24% 0;
+    background-color: $primaryColor2;
+    font-size: $font-size1;
+  }
+  .number{
+    width: 100%;
+    text-align: center;
+    padding: 6% 0;
+    background-color: $primaryColor3;
+    font-size: $font-size2;
+    color: #ffffff;
+  }
+}
+.cover{
+  width: 9.3rem;
+  height: 9.3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+footer{
+  width: 100%;
+  background-color: $primaryColor1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #c0c0c0;
+  .btn{
+    width: 60%;
+    height: 4rem;
+    background-color: $primaryColor2;
+    border: none;
+    font-size: $font-size1;
+    color: #ffffff;
+    float: left;
+    margin: 2rem 20%;
+  }
+}

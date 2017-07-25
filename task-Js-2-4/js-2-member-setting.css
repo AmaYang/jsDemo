@@ -1,0 +1,146 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #f0f0f0; }
+
+nav {
+  background-color: #29bde0;
+  font-size: 2rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2%; }
+  nav .img1 {
+    height: 25px; }
+  nav .img2 {
+    height: 25px; }
+
+.player-settings {
+  margin: 0.5rem 2%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex; }
+  .player-settings .div-l {
+    background-color: #fff;
+    width: 20%;
+    padding: 14rem 0;
+    font-size: 2rem;
+    text-align: center;
+    border-right: 1px solid #c0c0c0; }
+    .player-settings .div-l span {
+      display: block; }
+  .player-settings .div-r {
+    display: block;
+    position: relative;
+    font-size: 1.7rem;
+    background-color: #fbfbfb;
+    width: 80%;
+    padding-top: 2rem;
+    text-align: center; }
+    .player-settings .div-r .player-role {
+      width: 3rem;
+      height: 2.5rem;
+      font-size: 1.7rem;
+      background-color: #f0f0f0;
+      border: 1px solid #c0c0c0;
+      border-radius: 1rem;
+      text-align: center;
+      outline: none; }
+    .player-settings .div-r .container {
+      overflow-y: scroll;
+      height: 70%; }
+      .player-settings .div-r .container .detail .detail-role {
+        font-size: 1.7rem; }
+      .player-settings .div-r .container .detail .detail-number {
+        font-size: 1.7rem; }
+    .player-settings .div-r button {
+      color: #29bde0;
+      border-top: 1px solid #c0c0c0;
+      position: absolute;
+      bottom: 0;
+      padding: 2rem 0;
+      width: 100%;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center; }
+      .player-settings .div-r button img {
+        display: block;
+        margin-left: 1rem; }
+      .player-settings .div-r button span {
+        font-size: 1.7rem; }
+
+.word-settings {
+  margin: 0.5rem 2%;
+  padding: 0.5rem 1rem;
+  background-color: #fff; }
+  .word-settings input {
+    font-size: 1.7rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    width: 94%;
+    border: none;
+    border-bottom: 1.5px solid #f0f0f0;
+    outline: none; }
+
+.num-player {
+  font-size: 1.7rem;
+  margin: 0.5rem 2%;
+  background-color: #fff;
+  padding: 0.6rem;
+  text-align: center; }
+  .num-player input {
+    width: 4rem;
+    height: 3rem;
+    display: inline-block;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    outline: none;
+    font-size: 2rem;
+    background-color: #f0f0f0;
+    color: #fab344;
+    text-align: center; }
+  .num-player .range-bar {
+    width: 80%;
+    margin: 1.7rem 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 0.5rem;
+    background: #fab344; }
+  .num-player .range-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: 0 0 2px;
+    width: 3rem;
+    height: 1.8rem;
+    background-image: url("task-image/range2.png");
+    background-size: cover; }
+  .num-player .btn {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid #f0f0f0; }
+
+.deal {
+  display: block;
+  margin: 0.5rem 2%;
+  background-color: #fab344;
+  font-size: 2rem;
+  color: #fff;
+  width: 96%;
+  padding: 1.5rem 0; }
+
+/*# sourceMappingURL=js-2-member-setting.css.map */

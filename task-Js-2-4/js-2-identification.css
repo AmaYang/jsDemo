@@ -1,0 +1,116 @@
+html {
+  font-size: 62.5%; }
+
+nav {
+  background-color: #29bde0;
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 1px solid #c0c0c0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2%; }
+  nav .img1 {
+    height: 25px; }
+  nav .img2 {
+    height: 25px; }
+
+.main1 {
+  margin: 5rem 10%;
+  width: 80%;
+  height: 45rem;
+  background: #ffedc5 url("task-image/round.png") center no-repeat;
+  background-size: 70%;
+  position: relative;
+  border: 2px solid #fff; }
+  .main1 .location {
+    position: absolute;
+    left: 50%; }
+    .main1 .location .number {
+      margin-top: -50%;
+      margin-left: -50%;
+      width: 6rem;
+      height: 6rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid #ffedc5;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2rem;
+      color: #fbb435; }
+
+.main2 {
+  margin: 5rem 10%;
+  width: 80%;
+  height: 45rem;
+  background: #ffedc5 url("task-image/round2.png") center no-repeat;
+  background-size: 70%;
+  position: relative;
+  border: 2px solid #fff;
+  text-align: center; }
+  .main2 .location {
+    position: absolute;
+    left: 50%; }
+    .main2 .location .number {
+      margin-top: -50%;
+      margin-left: -50%;
+      width: 6rem;
+      height: 6rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid #ffedc5;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 2rem;
+      color: #fbb435; }
+  .main2 .ident {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 2%;
+    left: 35%; }
+
+body {
+  background-color: #29bde0; }
+
+.view {
+  display: block;
+  margin: 0.5rem 10%;
+  background-color: #fbb435;
+  font-size: 2rem;
+  color: #fff;
+  width: 80%;
+  padding: 1.5rem 0; }
+  .view span {
+    background-color: #fbb435;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1px;
+    outline: none; }
+
+.idCard {
+  display: none; }
+
+.bg-pic {
+  width: 25rem;
+  margin: 2% auto; }
+
+.btn {
+  position: absolute;
+  bottom: 3%; }
+
+.container {
+  margin: 2% 15%;
+  font-size: 1.7rem;
+  color: #fff;
+  height: 27rem;
+  overflow-y: scroll; }
+
+/*# sourceMappingURL=js-2-identification.css.map */

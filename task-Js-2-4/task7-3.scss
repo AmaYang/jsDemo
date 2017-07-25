@@ -1,0 +1,106 @@
+html{
+  font-size: 62.5%;
+}
+$primaryColor1: #29bde0;
+$primaryColor2: #ffc865;
+$primaryColor3: #f66f6f;
+$font-size1: 2rem;
+$font-size2: 1.5rem;
+$font-size3: 1.2rem;
+@mixin display ($flex){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+header {
+  background-color: $primaryColor1;
+  font-size: $font-size1;
+  color: #fff;
+  @include display(flex);
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  border-bottom: 1px solid #fff;
+  img {
+    height: 25px;
+  }
+}
+.end {
+  background-color: $primaryColor1;
+  border-bottom: 1px solid #c0c0c0;
+}
+.champion {
+  padding: 5% 0;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  img {
+    width: 225px;
+    height: 131px;
+  }
+  .champion-player {
+    margin-top: -3.6rem;
+  }
+}
+.end1 {
+  margin: 3% 8%;
+  font-size: $font-size1;
+  color: $primaryColor2;
+}
+.players {
+  margin: 0 8%;
+  padding: 3% 0;
+  font-size: $font-size2;
+  line-height: 2rem;
+  color: #fff;
+  .number {
+    display: inline-block;
+    width: 43%;
+  }
+}
+.details {
+  padding-bottom: 10rem;
+}
+.row {
+  padding: 1% 8%;
+  height: 6rem;
+  border-bottom: 1px solid #c0c0c0;
+  div {
+    line-height: 2rem;
+    font-size: $font-size2;
+    .time1 {
+      display: inline-block;
+      width: 60%;
+      font-size: $font-size2;
+      font-weight: 700;
+    }
+    .time2 {
+      display: inline-block;
+      width: 30%;
+      font-size: $font-size3;
+    }
+  }
+}
+footer{
+  background:rgba(41,189,224,0.5);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  button {
+    color: white;
+    font-size: $font-size1;
+    border-radius: 0.5rem;
+    width: 40%;
+    height: 2em;
+    margin: 1rem 5%;
+    float: left;
+  }
+  .btn1 {
+    background-color: $primaryColor3;
+  }
+  .btn2 {
+    background-color: $primaryColor2;
+  }
+}

@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #efefef; }
+
+header {
+  background-color: #29bde0;
+  font-size: 2rem;
+  color: #ffffff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  border-bottom: 1px solid #c0c0c0; }
+  header img {
+    width: 20px;
+    height: 20px; }
+
+.btns {
+  text-align: center;
+  background-color: #fff;
+  font-size: 2rem;
+  margin: 3%;
+  padding: 2% 0; }
+
+button {
+  font-size: 2rem;
+  color: #fff;
+  width: 80%;
+  margin: 2% 10%;
+  padding: 2.5% 0;
+  background-color: #83b09a; }
+
+/*# sourceMappingURL=js-2-diary.css.map */

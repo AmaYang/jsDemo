@@ -1,0 +1,131 @@
+$font-size1: 2rem;
+$font-size2: 1.7rem;
+$primaryColor1: #29bde0;
+$primaryColor2: #ffedc5;
+$primaryColor3: #fbb435;
+@mixin display ($flex){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+html {
+  font-size: 62.5%;
+}
+nav {
+  background-color: $primaryColor1;
+  font-size: $font-size1;
+  color: #fff;
+  border-bottom: 1px solid #c0c0c0;
+  .img1 {
+    height: 25px;
+  }
+  .img2 {
+    height: 25px;
+  }
+  @include display (flex);
+  justify-content: space-between;
+  padding: 1rem 2%;
+}
+.main1 {
+  margin: 5rem 10%;
+  width: 80%;
+  height: 45rem;
+  background: $primaryColor2 url("task-image/round.png") center no-repeat;
+  background-size: 70%;
+  position: relative;
+  border: 2px solid #fff;
+  .location{
+    position: absolute;
+    left: 50%;
+    .number{
+      margin-top: -50%;
+      margin-left: -50%;
+      width: 6rem;
+      height: 6rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid $primaryColor2;
+      text-align: center;
+      vertical-align: middle;
+      font-size: $font-size1;
+      color: $primaryColor3;
+    }
+  }
+}
+.main2 {
+  margin: 5rem 10%;
+  width: 80%;
+  height: 45rem;
+  background: $primaryColor2 url("task-image/round2.png") center no-repeat;
+  background-size: 70%;
+  position: relative;
+  border: 2px solid #fff;
+  text-align: center;
+  .location{
+    position: absolute;
+    left: 50%;
+    .number{
+      margin-top: -50%;
+      margin-left: -50%;
+      width: 6rem;
+      height: 6rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid $primaryColor2;
+      text-align: center;
+      vertical-align: middle;
+      font-size: $font-size1;
+      color: $primaryColor3;
+    }
+  }
+  .ident{
+    font-size: $font-size1;
+    position: absolute;
+    bottom: 2%;
+    left: 35%;
+  }
+}
+body{
+  background-color: $primaryColor1;
+}
+.view {
+  display: block;
+  margin: 0.5rem 10%;
+  background-color: $primaryColor3;
+  font-size: $font-size1;
+  color: #fff;
+  width: 80%;
+  padding: 1.5rem 0;
+  span{
+    background-color: $primaryColor3;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    color: #fff;
+    font-size: $font-size1;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 1px;
+    outline: none;
+  }
+}
+.idCard{
+  display: none;
+}
+.bg-pic{
+  width: 25rem;
+  margin: 2% auto;
+}
+.btn{
+  position: absolute;
+  bottom: 3%;
+}
+.container{
+  margin: 2% 15%;
+  font-size: $font-size2;
+  color: #fff;
+  height: 27rem;
+  overflow-y: scroll;
+}

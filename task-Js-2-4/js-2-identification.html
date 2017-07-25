@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link type="text/css" rel="stylesheet" href="reset.css">
+    <link type="text/css" rel="stylesheet" href="js-2-identification.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <title>js-2-identification</title>
+</head>
+<body>
+
+<nav>
+    <img class="img1" src="task-image/arrow-l.png">
+    <span>查看身份</span>
+    <img class="img2" src="task-image/cross.png">
+</nav>
+
+<div class="identification">
+    <div class="main1">
+        <div class="location">
+            <div id="" class="nub-a number"></div>
+        </div>
+    </div>
+
+    <button class="view" onclick="skipToId()">
+        查看<span class="nub-a"></span>号身份
+    </button>
+</div>
+
+<div class="idCard">
+    <div class="main2">
+        <div class="location">
+            <div id="nub-b" class="nub-b number"></div>
+        </div>
+        <div class="ident">角色：<span class="ids"></span> </div>
+    </div>
+
+    <button class="view" id="start" onclick="skipToNum()">
+        隐藏并传递给<span class="nub-a"></span>号
+    </button>
+    <button class="view" id="end" onclick="skipToBench()">查看法官台本</button>
+</div>
+
+
+<script src="js-2-identification.js"></script>
+</body>
+</html>

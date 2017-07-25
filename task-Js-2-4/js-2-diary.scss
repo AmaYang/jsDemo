@@ -1,0 +1,47 @@
+html{
+  font-size: 62.5%;
+}
+$primaryColor1: #29bde0;
+$primaryColor2: #fbb435;
+$primaryColor3: #83b09a;
+$primaryColor4: #efefef;
+$font-size1: 2rem;
+$font-size2: 1.5rem;
+@mixin display ($flex){
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+body {
+  background-color: $primaryColor4;
+}
+header {
+  background-color: $primaryColor1;
+  font-size: $font-size1;
+  color: #ffffff;
+  @include display(flex);
+  justify-content: space-between;
+  padding: 3%;
+  border-bottom: 1px solid #c0c0c0;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.btns {
+  text-align: center;
+  background-color: #fff;
+  font-size: $font-size1;
+  margin: 3%;
+  padding: 2% 0;
+}
+button {
+  font-size: $font-size1;
+  color: #fff;
+  width: 80%;
+  margin: 2% 10%;
+  padding: 2.5% 0;
+  background-color: $primaryColor3;
+}
