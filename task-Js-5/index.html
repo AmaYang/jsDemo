@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <title>login</title>
+</head>
+<body>
+<form class="login">
+    <div class="name">喝我水站后台登录</div>
+    <div class="row">
+        <span class="user"></span>
+        <input id="username" type="text" placeholder="用户名" onblur="checkName()" min="5" max="20">
+    </div>
+    <div class="errors" id="error1"></div>
+    <div class="row">
+        <span class="password"></span>
+        <input id="psw" type="text" placeholder="密码" onblur="checkPwd()" min="4" max="10">
+    </div>
+    <div class="errors" id="error2"></div>
+   <button type="button" id="getInside">登录</button>
+</form>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

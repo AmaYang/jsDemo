@@ -1,0 +1,254 @@
+$font-size1: 2rem;
+$font-size2: 1.5rem;
+$primaryColor1: #5c6bc0;
+
+.name {
+  padding: 1.5rem 0;
+  font-size: $font-size2;
+}
+.container-fluid {
+  background-color: $primaryColor1;
+}
+.navbar-nav {
+  width: 100%;
+  li {
+    float: none;
+  }
+}
+.navbar-default {
+  border-right: none;
+  border-left: none;
+}
+.navbar-collapse {
+  padding: 0;
+}
+.fa {
+  color: #fff;
+}
+.unit {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.dropdown-menu {
+  float: none;
+  border: none;
+  box-shadow: none;
+  position: static;
+  background-color: $primaryColor1;
+  min-width: 0;
+  li {
+    a {color: #fff;}
+  }
+}
+.fa-power-off {
+  color: #ffa550;
+}
+.nav-right {
+  background-color: #fff;
+  border-color: #e3e2e2;
+  width: 100%;
+  padding: 1.2rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  i {
+    width: 8rem;
+  }
+  .cell {
+    width: 8rem;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+  }
+}
+.form-page {
+  font-size: $font-size2;
+  float: left;
+  padding: 30px 20px 3000px 20px;
+  margin-bottom: -3000px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.form-upper {
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 0.5rem;
+}
+.row {
+  span {
+    font-weight: 700;
+    width: 10rem;
+    text-align: center;
+  }
+  input {
+    width: 98%;
+    border-radius: 0.5rem;
+    border: 1px solid #c0c0c0;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+  }
+  select {
+    width: 98%;
+    border-radius: 0.5rem;
+    border: 1px solid #c0c0c0;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+.bording {
+  margin: 1rem 0;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  .reset-btn {
+    width: 8rem;
+    margin-left: 20px;
+    background-color: #ff1493;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  .research-btn {
+    width: 8rem;
+    margin-left: 20px;
+    background-color: #90da00;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  .delete-btn {
+    width: 8rem;
+    margin-left: 20px;
+    background-color: $primaryColor1;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+.form-bottom {
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 0.5rem;
+  margin-top: 30px;
+}
+.table-zone {
+  overflow: auto;
+}
+@media screen and (max-width: 767px) {
+  .left-wing {
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    background-color: $primaryColor1;
+    text-align: center;
+  }
+  .right-wing {
+    margin-left: 0;
+  }
+  .navbar {
+    margin-bottom: 0;
+  }
+  .name {
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    padding: 1.5rem;
+  }
+  .unit {
+    padding-left: 25px;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    li{
+      padding-left: 50px;
+      a {color: #fff;}
+    }
+  }
+}
+@media screen and (min-width: 767px) {
+  .right-wing {
+    height: 100%;
+    margin-left: 250px;
+  }
+  .left-wing {
+    width: 250px;
+    padding-bottom: 3000px;
+    margin-bottom: -3000px;
+    color: #fff;
+    font-weight: 700;
+    background-color: $primaryColor1;
+    text-align: center;
+    float: left;
+  }
+}
+.heading {
+  padding: 1rem;
+  border-bottom: 1px solid #c0c0c0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .res-btn {
+    width: 5rem;
+    background-color: #90da00;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+.table {
+  width: 98%;
+  margin: 1%;
+}
+th {
+  text-align: center;
+}
+tr {
+  border: 1px solid #c0c0c0;
+  text-align: center;
+  .btn1 {
+    background-color: #ff1493;
+    border: 1px solid #ff1493;
+    border-radius: 0.4rem;
+    margin: 0.1rem;
+    color: #fff;
+  }
+  .btn2 {
+    background-color: $primaryColor1;
+    border: 1px solid $primaryColor1;
+    border-radius: 0.4rem;
+    margin: 0.1rem;
+    color: #fff;
+  }
+  .btn3 {
+    background-color: #90da00;
+    border: 1px solid #90da00;
+    border-radius: 0.4rem;
+    margin: 0.1rem;
+    color: #fff;
+  }
+}
+.footer {
+  div {
+    margin: 0.5rem 0;
+    text-align: right;
+  }
+  margin: 30px 20px 20px 0;
+  float: right;
+  button {
+    background-color: $primaryColor1;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+  input {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 0.5rem;
+    margin: 0 0.5rem;
+  }
+}

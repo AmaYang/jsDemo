@@ -1,0 +1,76 @@
+<div>
+    <div class="form-page">
+        <form class="form-upper" name="add">
+            <div class="">
+                <div>
+                    <div class="heading"> <strong>新增Article</strong> </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 bording">
+                        <span >标题名称</span>
+                        <input class="" type="text" name="title" ng-model="params.title" required>
+                    </div>
+                </div>
+                <span ng-show="add.title.$invalid && add.title.$touched">*标题名称不能为空</span>
+
+                <div class="row">
+                    <div class="col-md-1 col-sm-1 bording">
+                        <span>类型</span>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                        <select name="type" style="width: 20rem;" ng-model="params.type" ng-options="c.status as c.name for c in ops" required>
+                            <option value="">全部</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-5 col-sm-5">
+                        <select name="secType" id="" ng-if="params.type == 3" ng-model="params.industry" ng-options="x.status as x.name for x in opts" required>
+                            <option value="">全部</option>
+                        </select>
+                    </div>
+                </div>
+                <span ng-show="add.type.$invalid && add.type.$touched">*类型不能为空</span>
+                <span ng-show="add.secType.$invalid && add.secType.$touched">*行业大图细分种类不能为空</span>
+                <up-loader label-name="配图(必填)" ng-model="params.img" tip="文章配图" name="img" required="required"></up-loader>
+                <!--以下是富文本编辑器内容-->
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 bording">
+                        <span>说明</span>
+                        <div id="div1" style="height: 300px; width: 100%" ng-model="params.content" required></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 bording">
+                        <span>跳转链接</span>
+                        <input class="" type="text" ng-model="params.url" name="url" required>
+                    </div>
+                </div>
+                <span ng-show="add.url.$invalid && add.url.$touched">*跳转链接不能为空</span>
+                <!--以下是图片上传-->
+            </div>
+        </form>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 bording">
+                        <button type="button" class="reset-btn" ng-click="online(2)" ng-model="params.status"
+                                ng-disabled="add.title.$invalid || add.type.$invalid || add.url.$invalid || add.img.$invalid || add.secType.$invalid" >
+                            立即上线
+                        </button>
+
+                        <button type="button" class="research-btn" ng-click="online(1)" ng-model="params.status"
+                                ng-disabled="add.title.$invalid || add.type.$invalid || add.url.$invalid || add.img.$invalid || add.secType.$invalid">
+                            存为草稿
+                        </button>
+
+                        <button type="button" class="delete-btn" ng-click="cancel()">
+                            取消
+                        </button>
+                    </div>
+                </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="main">
+    <div class="left-wing">
+        <div class="name">萝卜多后台管理系统</div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#example-navbar-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <div class="dropdown-toggle unit" data-toggle="dropdown">
+                                <i class="fa fa-pencil">信息管理</i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">公司列表</a></li>
+                                <li><a href="#">职位列表</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-toggle unit" data-toggle="dropdown">
+                                <i class="fa fa-pencil">Article管理</i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="dropdown-menu"  id="dropdown-menu2">
+                                <li><a href="" ui-sref="home.form">Article列表</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <div class="dropdown-toggle unit" data-toggle="dropdown">
+                                <i class="fa fa-pencil">后台管理</i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <ul class="dropdown-menu"  id="dropdown-menu3">
+                                <li><a href="#">模块管理</a></li>
+                                <li><a href="#">角色管理</a></li>
+                                <li><a href="#">密码修改</a></li>
+                                <li><a href="#">账户管理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="right-wing">
+        <div class="nav-right"> <span class="cell">admin</span> <i class="fa fa-power-off fa-2x" aria-hidden="true"></i>  </div>
+        <div ui-view=""></div>
+    </div>
+</div>
+

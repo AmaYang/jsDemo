@@ -1,0 +1,71 @@
+html{
+  font-size: 62.5%;
+}
+$primaryColor1: #03a9f4;
+$font-size1: 2rem;
+$font-size2: 1.5rem;
+body {
+  background: url("task-image/background.png") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+.login {
+  background-color: rgba(255,255,255,0.7);
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  height: 270px;
+  top: 50%;
+  left: 50%;
+  margin-top: -135px;
+  margin-left: -150px;
+  border-radius: 2rem;
+  .row {
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: table;
+    span {
+      width: 4rem;
+      height: 1.5rem;
+      display: table-cell;
+      border-right: 1px solid #c0c0c0;
+    }
+    input {
+      font-size: $font-size2;
+      padding: 0.5rem 1rem;
+      border: none;
+      display: table-cell;
+      outline: none;
+    }
+    .user {
+      background: url("task-image/user.png") no-repeat center;
+    }
+    .password {
+      background: url("task-image/loc.png") no-repeat center;
+    }
+  }
+  .name {
+    color: $primaryColor1;
+    font-size: $font-size1;
+    margin: 1rem 0;
+  }
+  button {
+    background-color: $primaryColor1;
+    outline: none;
+    border: none;
+    font-size: $font-size2;
+    color: #fff;
+    padding: 1rem;
+    width: 86%;
+  }
+  .errors {
+    margin: 1rem 8%;
+    font-size: 1.2rem;
+    color: #FF0000;
+    display: flex;
+    height: 1.5rem;
+  }
+}
+

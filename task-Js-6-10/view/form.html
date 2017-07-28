@@ -1,0 +1,114 @@
+<div class="form-page">
+    <form class="form-upper">
+        <div class="">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 bording">
+                    <span>发布时间</span>
+                    <input class="" type="date" ng-model="startAt">
+                </div>
+
+                <div class="col-md-4 col-sm-12 bording">
+                    <span>一</span>
+                    <input class="" type="date" ng-model="endAt">
+                </div>
+                <div class="col-md-4 col-sm-12 bording">
+                    <span>类型</span>
+                    <select ng-model="parmas.type" name="" required>
+                        <option value="">全部</option>
+                        <option value="0">首页banner</option>
+                        <option value="1">找职位banner</option>
+                        <option value="2">找精英banner</option>
+                        <option value="3">行业大图</option>
+                    </select>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12 bording">
+                    <span>状态</span>
+                    <select ng-model="parmas.status">
+                        <option value="">全部</option>
+                        <option value="2">上线</option>
+                        <option value="1">草稿</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 bording">
+                    <button type="button" class="reset-btn" ui-sref="home.form({type: '',status: '',startAt: '',endAt: '',size:'',page:1})">
+                        清空
+                    </button>
+                    <!--重置按钮，直接将参数内容清空，只保留参数名称-->
+                    <button type="button" class="research-btn"
+                            ui-sref="home.form({type:parmas.type,status:parmas.status,startAt:startAt,endAt:endAt,page:1})"
+                            ui-sref-opts="{reload:true}" ng-click="search()">
+                        搜索
+                    </button>
+                    <!--reload:true是刷新页面，ui-sref传参固定写法跳转到页面并传参，按照键值对的方式来传参，如“type:parmas.type,status”-->
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="form-bottom">
+        <div class="heading">
+            <strong>Article列表</strong>
+            <button type="button" class="res-btn" ui-sref="home.add">+新增</button>
+        </div>
+        <div class="table-zone">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>发布时间</th>
+                    <th>修改时间</th>
+                    <th>发布者</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="msg in upperForm">
+                    <td>{{msg.id}}</td>
+                    <td>{{msg.title}}</td>
+                    <td>{{msg.type | typeFliter}}</td>
+                    <td>{{msg.createAt | date:"yyyy/MM/dd HH:mm:ss"}}</td>
+                    <td>{{msg.updateAt | date:"yyyy/MM/dd HH:mm:ss"}}</td>
+                    <td>{{msg.author}}</td>
+                    <td>{{msg.status | statusFilter}}</td>
+                    <td>
+                        <button class="btn1" ng-click="changeStatus(msg.id)">{{msg.status | buttonFilter}}</button>
+                        <button class="btn2" ng-click="chgInfo(msg.id)">编辑</button>
+                        <button class="btn3" ng-click="delete(msg.id)">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            每页显示<input class="number" type="text" size="1" ng-model="parmas.size">条
+            <button type="button" class="research-btn" ui-sref-opts="{reload:true}" ui-sref="home.form({size:parmas.size})">
+                确定
+            </button>
+        </div>
+        <div>
+            <button type="button" ng-click="firstPage()">首页</button>
+            <button type="button" ng-click="prePage()">上一页</button>
+            <span ng-repeat="x in pageNum">
+                            <button ng-click="xPage()">{{x}}</button>
+                    </span>
+            <button type="button" ng-click="nextPage()">下一页</button>
+            <button type="button" ng-click="lastPage()">末页</button><br>
+        </div>
+        <div>
+            去第<input type="text" ng-model="jPage" size="1">页
+            <button type="button" ng-click="jumpPage()">确定</button>
+        </div>
+    </div>
+</div>

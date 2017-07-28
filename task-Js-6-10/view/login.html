@@ -1,0 +1,19 @@
+<div class="page-login">
+<form class="login" id="loginForm">
+    <div class="firstname">萝卜多后台登录</div>
+    <div class="row">
+        <span class="user"></span>
+        <input name="username" ng-model="params.name" type="text" placeholder="请输入账号" min="5" max="20" required>
+    </div>
+    <div class="errors" id="error1"></div>
+    <div class="row">
+        <span class="password"></span>
+        <input name="psw" ng-model="params.pwd" type="text" placeholder="请输入密码" min="4" max="10" required>
+    </div>
+    <div class="errors" id="error2">
+        <span ng-show="(loginForm.username.$invalid && loginForm.username.$touched) ||
+        (loginForm.psw.$invalid && loginForm.psw.$touched)">账号或密码错误</span>
+    </div>
+    <button type="button" ng-click="getInside()" ng-disabled="loginForm.username.$invalid || loginForm.psw.$invalid">登录</button>
+</form>
+</div>

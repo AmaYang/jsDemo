@@ -1,0 +1,60 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  background: url("task-image/background.png") no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh; }
+
+.login {
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  position: absolute;
+  width: 300px;
+  height: 270px;
+  top: 50%;
+  left: 50%;
+  margin-top: -135px;
+  margin-left: -150px;
+  border-radius: 2rem; }
+  .login .row {
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: table; }
+    .login .row span {
+      width: 4rem;
+      height: 1.5rem;
+      display: table-cell;
+      border-right: 1px solid #c0c0c0; }
+    .login .row input {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      display: table-cell;
+      outline: none; }
+    .login .row .user {
+      background: url("task-image/user.png") no-repeat center; }
+    .login .row .password {
+      background: url("task-image/loc.png") no-repeat center; }
+  .login .name {
+    color: #03a9f4;
+    font-size: 2rem;
+    margin: 1rem 0; }
+  .login button {
+    background-color: #03a9f4;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem;
+    width: 86%; }
+  .login .errors {
+    margin: 1rem 8%;
+    font-size: 1.2rem;
+    color: #FF0000;
+    display: flex;
+    height: 1.5rem; }
+
+/*# sourceMappingURL=index.css.map */
